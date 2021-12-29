@@ -1,0 +1,15 @@
+- name: Automatically check for updates - TODO
+  community.general.osx_defaults:
+    domain: /Library/Preferences/com.apple.SoftwareUpdate
+    key: AutomaticCheckEnabled
+    type: int
+    value: 1
+  become: yes
+
+- name: MacOS screensaver - TODO
+  community.general.osx_defaults:
+    domain: com.apple.screensaver
+    host: currentHost
+    key: showClock
+    type: int
+    value: 1
